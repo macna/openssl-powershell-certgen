@@ -42,7 +42,10 @@ emailAddress = Contact email address
 emailAddress_default = $email
 commonName_max = 64
 [ v3_req ]
-subjectAltName=DNS:$wwwSAN
+subjectAltName= @alt_names
+[alt_names]
+DNS.1 = $wwwSAN
+DNS.2 = $commonName
 # -------------- END CONFIG --------------
 "@
 
